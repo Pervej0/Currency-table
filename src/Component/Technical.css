@@ -1,20 +1,21 @@
-.anticator-box .anticator{
-    position: relative; 
-    bottom: 18px;   
+.anticator-box .anticator {
+  position: relative;
+  bottom: 18px;
 }
 
-.anticator-box .anticator-line{
-    height: 70px;
-    width: 2px;
-    transform-origin: center bottom;
+.anticator-box .anticator-line {
+  height: 80px;
+  width: 2px;
+  transform-origin: center bottom;
+  border-radius: 50px;
 }
 
-.anticator-box .anticator .anticator-pointer{
-    position: absolute;
-    left: -1px;
-    bottom: -10px;
-    background-color: blue;
-    padding: 3px;
-    text-align: center;
-    border-radius: 50px;
+.anticator-box .anticator .anticator-pointer {
+  position: absolute;
+  left: -1px;
+  bottom: -10px;
+  background-color: blue;
+  padding: 3px;
+  text-align: center;
+  border-radius: 50px;
 }
