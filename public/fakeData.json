@@ -1,17 +1,19 @@
 [
   {
     "name": "EUR",
+    "img": "https://i.ibb.co/rwcmfGZ/euro.png",
     "0": [
       { "country": "EUR", "cur": "" },
       { "country": "USD", "cur": 2 },
       { "country": "JPY", "cur": 1 },
       { "country": "GBP", "cur": 0.22 },
       { "country": "CHF", "cur": 0.322 },
-      { "country": "AUD", "cur": 2 }
+      { "country": "AUD", "cur": -2 }
     ]
   },
   {
     "name": "USD",
+    "img": " https://i.ibb.co/Rjp1Mjn/usd.png",
     "1": [
       { "country": "EUR", "cur": 2 },
       { "country": "USD", "cur": "" },
@@ -23,17 +25,19 @@
   },
   {
     "name": "JPY",
+    "img": "https://i.ibb.co/fYps5gb/jpy.png",
     "2": [
       { "country": "EUR", "cur": 3 },
       { "country": "USD", "cur": 2 },
       { "country": "JPY", "cur": "" },
       { "country": "GBP", "cur": 0.22 },
-      { "country": "CHF", "cur": 0.622 },
+      { "country": "CHF", "cur": 0 },
       { "country": "AUD", "cur": 4 }
     ]
   },
   {
     "name": "GBP",
+    "img": "https://i.ibb.co/hYNTSSy/gbp.png",
     "3": [
       { "country": "EUR", "cur": 3 },
       { "country": "USD", "cur": 2 },
@@ -45,6 +49,7 @@
   },
   {
     "name": "CHF",
+    "img": "https://i.ibb.co/p1ZJwmw/chf.png",
     "4": [
       { "country": "EUR", "cur": 3 },
       { "country": "USD", "cur": 2 },
@@ -56,6 +61,7 @@
   },
   {
     "name": "AUD",
+    "img": "https://i.ibb.co/NYKXFdP/f5ed10ec1625eb393ada7073b9afd17e.png",
     "5": [
       { "country": "EUR", "cur": 5 },
       { "country": "USD", "cur": 4 },
