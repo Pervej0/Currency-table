@@ -1,30 +1,19 @@
 import React, { useState } from 'react';
 
 const SingleTicker = () => {
-   /*  const currencyData = {
-        EUR: 2.00126,
-        USD: 1.15805,
-    } */
-    // const [isUp, setIsUp] = useState(false);
-    const EUR_USD = [1.15805, 2.00126]
+    const EUR_USD = [23.15805, 2.00126]
     let percentage = 0;
    
     if(EUR_USD[0] > EUR_USD[1]){
         const count = EUR_USD[1]/EUR_USD[0] * 100;
         percentage = count.toFixed(2)
-        // setIsUp(false)
-        console.log("",count.toFixed(2));
     }else{
         const count = EUR_USD[0]/EUR_USD[1] * 100;
-        percentage = count.toFixed(2)
-        console.log(count);
-        // setIsUp(true)
-        
+        percentage = count.toFixed(2)        
     }
-    console.log(percentage);
-    // console.log(isUp);
+    
     return (
-        <div className="w-2/5 mx-auto">
+        <div className="w-1/5 mx-auto">
             <div className="border pl-5 py-2">
                 <div className="flex items-center gap-5">
                     <div>

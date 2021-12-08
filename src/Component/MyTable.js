@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const MyTable = () => {
+const MyTable = ({isColorFull}) => {
   const [data, setData] = useState([]);
   /* 
   Getting fake data from "fakeData.json" file and displaying those through map function.
@@ -13,7 +13,7 @@ const MyTable = () => {
 
   return (
     <>
-      <div className="w-3/5 mx-auto">
+      <div className="w-3/5 mx-auto" style={{overflowX: "scroll"}}>
         <table className="border text-center">
           <tbody>
             <tr>
@@ -37,11 +37,22 @@ const MyTable = () => {
                     <img src={item.img} alt=""/>
                   <div className="px-4">{item.name}</div>
                 </th>
+                {isColorFull? <> 
                 {item[index].map((curren) => (
-                  <td key={curren.country} className={`border  ${curren.cur > 0? "bg-green-600 text-white": "bg-red-500 text-white"}`} >
+                  
+                    <td key={curren.country} className={`border ${curren.cur > 0? "bg-green-600 text-white": "bg-red-500 text-white"}`} >
                     {curren.cur}
                   </td>
                 ))}
+                </>:
+                <>{item[index].map((curren) => (
+                  
+                  <td key={curren.country} className={`border ${curren.cur >3 && "bg-green-200"} ${curren.cur < 0 && "bg-red-200"}`}>
+                  {curren.cur}
+                </td>
+              ))}
+              </>
+                }
               </tr>
             ))}
           </tbody>
