@@ -13,7 +13,7 @@ const SingleTicker = () => {
     }
     
     return (
-        <div className="w-1/5 mx-auto">
+        <div className="sm:w-3/5 lg:w-1/5 w-full px-14 mx-auto">
             <div className="border pl-5 py-2">
                 <div className="flex items-center gap-5">
                     <div>

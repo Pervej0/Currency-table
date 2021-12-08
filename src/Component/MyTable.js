@@ -13,7 +13,7 @@ const MyTable = ({isColorFull}) => {
 
   return (
     <>
-      <div className="w-3/5 mx-auto" style={{overflowX: "scroll"}}>
+      <div className="w-3/5 mx-auto overflow-x-scroll md:overflow-x-hidden">
         <table className="border text-center">
           <tbody>
             <tr>

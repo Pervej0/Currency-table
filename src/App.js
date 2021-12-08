@@ -3,6 +3,7 @@ import MyTable from './Component/MyTable';
 import Technical from './Component/Technical';
 import SingleTicker from './Component/SingleTicker';
 import TickerTape from './Component/TickerTape/TickerTape';
+import MiniChart from './Component/MiniChart/MiniChart';
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
       <br/>
       <br/>
       <TickerTape/>
+      <br/>
+      <br/>
+      <br/>
+      <MiniChart/>
     </div>
   );
 }
