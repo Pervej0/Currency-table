@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const SingleTicker = () => {
     const EUR_USD = [23.15805, 2.00126]

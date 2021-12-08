@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import MyTable from './Component/MyTable';
 import Technical from './Component/Technical';
