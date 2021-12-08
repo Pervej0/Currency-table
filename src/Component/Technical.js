@@ -9,10 +9,10 @@ const Technical = () => {
     // let rotation = Math.floor(technicalData.count/100)
     const boxColor = {
         boxShadow: "inset 0 30px 60px -15px #f23044",
-        borderTopLeftRadius: "100vw",
-        borderTopRightRadius: "100vw",
+        borderTopLeftRadius: "110vw",
+        borderTopRightRadius: "110vw",
         height: "auto",    
-        width: "93%",
+        width: "100%",
         margin: "0 auto"
     }
     return (
