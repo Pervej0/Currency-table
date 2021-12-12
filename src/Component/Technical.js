@@ -17,7 +17,8 @@ const Technical = () => {
   }
 
   return (
-    <div className="border"  style={{overflowX: "scroll"}}>
+    <div className="border border-black md:w-3/5
+     w-full mx-auto mx-4 overflow-hidden">
       <h3 className="text-gray-600 text-center py-2">Technical Analysis</h3>
       <div>
         {technicalData.time.map((item) => (
@@ -60,7 +61,7 @@ const Technical = () => {
         </div>
         <div
           style={{ width: "50px" }}
-          className="absolute leading-3 left-0 right-0 top-10 mx-auto"
+          className="absolute inline-block leading-3 left-0 right-0 top-10 mx-auto"
         >
           <small className="uppercase font-semibold">Nutral</small>
         </div>

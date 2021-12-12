@@ -3,12 +3,14 @@
     "name": "EUR",
     "img": "https://i.ibb.co/rwcmfGZ/euro.png",
     "0": [
-      { "country": "EUR", "cur": 10 },
+      { "country": "EUR", "cur": 0 },
       { "country": "USD", "cur": 2 },
       { "country": "JPY", "cur": 1 },
       { "country": "GBP", "cur": 0.22 },
       { "country": "CHF", "cur": 0.322 },
-      { "country": "AUD", "cur": -2 }
+      { "country": "AUD", "cur": -2 },
+      { "country": "CAD", "cur": 2 },
+      { "country": "NZD", "cur": 3 }
     ]
   },
   {
@@ -20,7 +22,9 @@
       { "country": "JPY", "cur": 0.023 },
       { "country": "GBP", "cur": 0.322 },
       { "country": "CHF", "cur": 0.522 },
-      { "country": "AUD", "cur": 3 }
+      { "country": "AUD", "cur": 3 },
+      { "country": "CAD", "cur": 1.3 },
+      { "country": "NZD", "cur": 2.5 }
     ]
   },
   {
@@ -32,7 +36,9 @@
       { "country": "JPY", "cur": 0 },
       { "country": "GBP", "cur": 0.22 },
       { "country": "CHF", "cur": 0 },
-      { "country": "AUD", "cur": 4 }
+      { "country": "AUD", "cur": 4 },
+      { "country": "CAD", "cur": 3 },
+      { "country": "NZD", "cur": 0.9 }
     ]
   },
   {
@@ -44,7 +50,9 @@
       { "country": "JPY", "cur": 0.232 },
       { "country": "GBP", "cur": 0 },
       { "country": "CHF", "cur": 0.622 },
-      { "country": "AUD", "cur": 4 }
+      { "country": "AUD", "cur": 4 },
+      { "country": "CAD", "cur": 2 },
+      { "country": "NZD", "cur": 3.2 }
     ]
   },
   {
@@ -56,7 +64,9 @@
       { "country": "JPY", "cur": 0.232 },
       { "country": "GBP", "cur": 3 },
       { "country": "CHF", "cur": 0 },
-      { "country": "AUD", "cur": 0.66 }
+      { "country": "AUD", "cur": 0.66 },
+      { "country": "CAD", "cur": 1.5 },
+      { "country": "NZD", "cur": 1.9 }
     ]
   },
   {
@@ -68,7 +78,37 @@
       { "country": "JPY", "cur": 0.33 },
       { "country": "GBP", "cur": 1 },
       { "country": "CHF", "cur": 2 },
-      { "country": "AUD", "cur": 0 }
+      { "country": "AUD", "cur": 0 },
+      { "country": "CAD", "cur": 1.9 },
+      { "country": "NZD", "cur": 2 }
+    ]
+  },
+  {
+    "name": "CAD",
+    "img": "https://i.ibb.co/K0jHVWn/cad.png",
+    "6": [
+      { "country": "EUR", "cur": 5 },
+      { "country": "USD", "cur": 4 },
+      { "country": "JPY", "cur": 0.33 },
+      { "country": "GBP", "cur": 1 },
+      { "country": "CHF", "cur": 2 },
+      { "country": "AUD", "cur": 2.3 },
+      { "country": "CAD", "cur": 0 },
+      { "country": "NZD", "cur": 2.3 }
+    ]
+  },
+  {
+    "name": "NZD",
+    "img": "https://i.ibb.co/vqnvdSs/nzd.png",
+    "7": [
+      { "country": "EUR", "cur": 5 },
+      { "country": "USD", "cur": 4 },
+      { "country": "JPY", "cur": 0.33 },
+      { "country": "GBP", "cur": 1 },
+      { "country": "CHF", "cur": 2 },
+      { "country": "AUD", "cur": 2.3 },
+      { "country": "CAD", "cur": 2.3 },
+      { "country": "NZD", "cur": 0 }
     ]
   }
 ]
