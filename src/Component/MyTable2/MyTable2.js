@@ -48,7 +48,7 @@ const MyTable2 = ({isColorful}) => {
                         isColorful ?
                         <tr key={currency[0]}>
                             <th className="border py-2 lg:px-3 px-0 flex items-center">                                
-                            <img className="lg:block hidden" src={myData[index][index]} alt=""/>
+                                <img className="lg:block hidden" src={myData[index][index]} alt=""/>
                                 <div className="px-4">{currency[0]}</div>                              
                             </th>                                                                  
                               {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useEffect } from "react/cjs/react.development";
 import myData from "../TableData";
 
-const MyTable3 = ({isColorful}) => {
+const MyTable5 = ({isColorful}) => {
   const [data, setData] = useState(null);
   const [currencyValue, setCurrencyValue] = useState(null);
 
@@ -12,7 +12,7 @@ const MyTable3 = ({isColorful}) => {
     )
       .then((res) => res.json())
       .then((data) => setData(Object.entries(data)));
-  }, [data]);
+  }, []);
 
   useEffect(() => {
     fetch(
@@ -20,18 +20,17 @@ const MyTable3 = ({isColorful}) => {
     )
       .then((res) => res.json())
       .then((result) => {
-      setCurrencyValue(Object.entries(result))
-      });
+    /* Object.entries(result).map(currency => Object.entries(currency[1]).map(value => setCurrencyValue(value[1])))  */
+    setCurrencyValue(Object.entries(result))
+    });
   }, []);
-
+  
   const handleComparison = (name) => {
     // console.log(name);
     return currencyValue.map((value) => {
       return value[1][name]
     });
   };
-
- let allName = {};
 
   return (
     <div>
@@ -42,17 +41,16 @@ const MyTable3 = ({isColorful}) => {
               <th className="border py-2 px-3">
                 <div className="px-4"></div>
               </th>
-              {myData?.map((item, index) => (
+             {myData?.map((item, index) => (
                 <th key={item.name} className="border py-2 px-3">
                   <div className="flex py-3 px-2 items-center justify-center object-cover">
                     <img src={item[index]} alt="" />
                     <span className="pl-2">{item.name}</span>
-                  </div>
-                  {allName.name}
+                  </div>              
                 </th>
               ))}
             </tr>
-            {data?.map((currency, index) => (
+            {data?.slice(0,8)?.map((currency, index) => (
               isColorful ? <tr key={currency[0]}>
               <th className="border py-2 lg:px-3 px-0 flex items-center">
                 <img
@@ -63,20 +61,21 @@ const MyTable3 = ({isColorful}) => {
                 <div className="px-4">{currency[0]}</div>
               </th>
               {Object.entries(currency[1]).map(
-                (value, index) =>
-                  currencyValue && (
-                    <td
+                (value, index) =>                
+               currencyValue && (
+                 <td
                       key={index}
                       className={`border ${
-                        handleComparison(currency[0])[index] < value[1]
+                        2 < value[1]
                           ? "bg-green-600 text-white"
                           : "bg-red-600 text-white"
                       }  
                       ${value[1] === 1 && "bg-blue-300"}`}
                     >
                       {value[1]}
-                    </td>
-                  )
+                    </td> 
+                    
+                  ) 
               )}
             </tr>:
             <tr key={currency[0]}>
@@ -93,15 +92,16 @@ const MyTable3 = ({isColorful}) => {
                     currencyValue && (
                     <td
                         key={index}
-                        className={`${handleComparison(currency[0])[index]}
+                        className={`
                         ${value[1] === 1 && "bg-blue-300"}`}
                     >
                         {handleComparison(currency[0])[index]}
+                       {console.log(handleComparison(currency[0])[index])}
                     </td>
                     )
                 )}
             </tr>
-            ))}
+            ))}           
           </tbody>
         </table>
       </div>
@@ -109,4 +109,4 @@ const MyTable3 = ({isColorful}) => {
   );
 };
 
-export default MyTable3;
+export default MyTable5;
