@@ -1,13 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react/cjs/react.development";
 import "./Technical.css";
 
 const Technical = () => {
-  const technicalData = {
-    time: [1, 5, 10, 30],
+  const [randomValue, setRandomValue] = useState(0);
+  const rotationNumber = [14, 6, -20, 20, -30, 30, 50, 80, 90, 0, -90, -50];
+
+const randomNumber = () =>{
+  return rotationNumber[Math.floor(Math.random() * rotationNumber.length)]
+}
+
+useEffect(()=>{
+   setInterval(()=>{
+     setRandomValue(randomNumber())
+  }, 5000)
+},[])
+
+const technicalData = {
+    time : [4, 6, 10, 30],
     count: 5000,
   };
+
   const boxColor = {
-    boxShadow: "inset 0 17px 27px -10px rgba(242, 48, 68,.2)",
+    boxShadow: "inset 0 17px 27px -10px rgba(242, 48, 68, .2)",
     borderTopLeftRadius: "100vw",
     borderTopRightRadius: "100vw",
   };
@@ -15,7 +30,6 @@ const Technical = () => {
   const handleTimeClick = ()=>{
     alert("Will Come soon! wait..")
   }
-
   return (
     <div className="border border-black md:w-3/5
      w-full mx-auto mx-4 overflow-hidden">
@@ -96,8 +110,8 @@ const Technical = () => {
         >
           <div className="anticator inline-block">
             <div
-              style={{ transform: "rotate(60deg)" }}
-              className="anticator-line bottom-5 bg-black mx-auto"
+              style={{ transform:`rotate(${randomValue}deg)` }}
+              className="anticator-line bottom-5 bg-black mx-auto transition ease-in-out delay-150 duration-1000"
             ></div>
             <div className="anticator-pointer"></div>
           </div>

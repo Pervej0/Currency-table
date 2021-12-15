@@ -8,6 +8,7 @@ import MyTable2 from './Component/MyTable2/MyTable2';
 import MyTable3 from './Component/MyTable3/MyTable3';
 import MyTable4 from './Component/MyTable4/MyTable4';
 import MyTable5 from './Component/MyTable5/MyTable5';
+import TickerWidget from './Component/TickerWidget/TickerWidget';
 
 function App() {
   return (
@@ -24,19 +25,19 @@ function App() {
       <br/>
       <br/>
       <MyTable2 isColorful={false}/> */}
-
-      {/* <MyTable3 isColorful={true}/>
+{/* 
+      <MyTable3 isColorful={true}/>
       <br/>
       <br/>
       <MyTable3 isColorful={false}/>
-      <br/>  */}
+      <br/>   */}
       
 
-     {/*  <MyTable4 isColorful={true}/>
+     {/*   <MyTable4 isColorful={true}/>
       <br/>
       <br/>
       <MyTable4 isColorful={false}/>
-      <br/> */}
+      <br/>  */}
 
       <MyTable5 isColorful={true}/>
       <br/>
@@ -47,8 +48,9 @@ function App() {
       <Technical/>
       <br/>
       <br/>
-      <h2>Single Ticker</h2>
-      <SingleTicker/>
+      <h2 className="text-2xl my-4">Ticker Widget</h2>
+      {/* <TickerWidget/> */}
+      {/* <SingleTicker/> */}
       <br/>
       <br/>
       <br/>
@@ -56,7 +58,7 @@ function App() {
       <br/>
       <br/>
       <br/>
-      <MiniChart/>
+      {/* <MiniChart/> */}
     </div>
   );
 }
