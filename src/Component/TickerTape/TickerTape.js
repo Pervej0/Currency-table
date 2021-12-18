@@ -3,47 +3,30 @@ import { useEffect } from "react/cjs/react.development";
 import GetPrice from "../DataTest";
 import Ticker from "./SubCompo/Ticker";
 import "./TickerTape.css";
-import EUR_USD from "../../Images/eur_usd.svg";
+import EURUSD from "../../Images/eur_usd.svg";
+import AUDUSD from "../../Images/aud_usd.svg";
+import GBPUSD from "../../Images/gbp_usd.svg";
+import useData from "../../Hooks/useData";
+
 
 const TickerTape = () => {
-  const [EUR_USD_Data, setEUR_USD_Data] = useState(0);
-  const [allData, setAllData] = useState([]);
+   const currencyList = {
+    eurusd: useData("eurusd", EURUSD),
+    gbpusd: useData("gbpusd", GBPUSD),
+    audusd: useData("audusd", AUDUSD),        
+}  
 
-  useEffect(() => {
-    let ws = new WebSocket("wss://stream.binance.com:9443/ws/btcusdt@ticker");
-    ws.onmessage = (event) => {
-      let socketObj = JSON.parse(event.data);
-      setEUR_USD_Data(socketObj.p.split("."));
-      setAllData((prev) => {
-        return { ...prev, price: socketObj.p, lasTrade: socketObj.l };
-      });
-    };
-  }, []);
-
-  /*      EUR_USD_Data && (
-console.log(EUR_USD_Data)
-    )  */
-  const EUR_USD_Dtails = {
-    EUR_USD: EUR_USD_Data,
-    img: EUR_USD,
-  };
-  /*   const ETH_USD_Dtails = {
-        EUR_USD : EUR_USD_Data,
-        img: ["https://i.ibb.co/Rjp1Mjn/usd.png"]        
-    } */
   return (
-    <div className="py-12">
+    <div className="py-12 tickerTape-section">
       <h1 className="text-xl">Ticker Tape</h1>
-      <div className="border w-9/12 mx-auto p-2">
-        <marquee behavior="alternate">
-          <div className="flex gap-5">
-            <Ticker CompareCurrency={EUR_USD_Dtails} />
-            <Ticker CompareCurrency={EUR_USD_Dtails} />
-            <Ticker CompareCurrency={EUR_USD_Dtails} />
-            <Ticker CompareCurrency={EUR_USD_Dtails} />
-            {/* <Ticker CompareCurrency={EUR_USD_Dtails}/>  */}
-          </div>
-        </marquee>
+      <div className="border w-9/12 mx-auto p-2">       
+        <div className="tickerTape">
+     
+            <div className="flex gap-5">
+              {Object.entries(currencyList).map(item => <Ticker key={item} details={item}/>)}          
+            </div> 
+               
+        </div>
       </div>
     </div>
   );

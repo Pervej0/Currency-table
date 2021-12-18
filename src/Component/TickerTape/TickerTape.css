@@ -1,0 +1,19 @@
+.tickerTape-section .tickerTape {
+  overflow: hidden;
+  animation: mymove 10s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes mymove {
+  0% {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0;
+  }
+}

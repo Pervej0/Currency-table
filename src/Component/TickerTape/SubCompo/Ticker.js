@@ -1,17 +1,7 @@
 import React from "react";
 
-const Ticker = ({ CompareCurrency }) => {
-  let percentage = 0;
-  if (CompareCurrency.EUR_USD[0] > CompareCurrency.EUR_USD[1]) {
-    const count =
-      (CompareCurrency.EUR_USD[1] / CompareCurrency.EUR_USD[0]) * 100;
-    percentage = count.toFixed(2);
-  } else {
-    const count =
-      (CompareCurrency.EUR_USD[0] / CompareCurrency.EUR_USD[1]) * 100;
-    percentage = count.toFixed(2);
-  }
-
+const Ticker = ({ details }) => {
+  console.log(details);
   return (
     <div className="items-center gap-4 ticker-container">
       <div className="border-r border-gray-400 flex gap-5 pr-4">
@@ -19,34 +9,31 @@ const Ticker = ({ CompareCurrency }) => {
           <img
             className="inline"
             style={{ height: "30px", width: "30px" }}
-            src={CompareCurrency.img}
+            src={details[1].img}
             alt=""
           />
           <small
             className="font-semibold inline pl-2"
             style={{ fontSize: "12px" }}
           >
-            EURUSD
+            {details[0]}
           </small>
         </div>
         <div className="text-left flex gap-5">
-          <h1 className="text-2xl">{CompareCurrency.EUR_USD[0]}</h1>
-          <div
-            className={
-              CompareCurrency.EUR_USD[0] < CompareCurrency.EUR_USD[1]
-                ? "text-green-500"
-                : "text-red-500"
-            }
+          <h1 className="text-2xl">{details[1].value}</h1>
+          <div                         
           >
             <small
               className={`${
-                parseInt(percentage) < 1 ? "text-red-400" : "text-green-500"
-              }`}
+                parseInt(details[1].percentage) < 1 ? "text-red-400" : "text-green-500"
+              } uppercase`}
             >
-              ({percentage}%)
+              ({details[1].percentage}%)
             </small>
-            <h3 className="text-lg inline-block ml-2">
-              ({CompareCurrency.EUR_USD[1]})
+            <h3 className={`${
+                parseInt(details[1].priceChange) < 1 ? "text-red-400" : "text-green-500"
+              }`}>
+              ({details[1].priceChange})
             </h3>
           </div>
         </div>

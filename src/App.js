@@ -9,6 +9,7 @@ import MyTable3 from "./Component/MyTable3/MyTable3";
 import MyTable4 from "./Component/MyTable4/MyTable4";
 import MyTable5 from "./Component/MyTable5/MyTable5";
 import TickerWidget from "./Component/TickerWidget/TickerWidget";
+import MarketData from "./Component/MarketData/MarketData";
 
 function App() {
   return (
@@ -43,9 +44,9 @@ function App() {
       <br />
       <MyTable5 isColorful={false} />
       <br />
-
       <Technical />
       <br />
+        <MarketData />
       <br />
       <h2 className="text-2xl my-4">Ticker Widget</h2>
       <TickerWidget />

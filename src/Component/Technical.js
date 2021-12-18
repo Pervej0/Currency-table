@@ -21,10 +21,25 @@ const technicalData = {
     count: 5000,
   };
 
+  let boxShadow;
+
+  if(randomValue < -62){
+    boxShadow = "rgba(242, 48, 68, .2)";
+  }else if(randomValue < -15){
+    boxShadow = "rgba(255, 82, 59, .2)";    
+  }else if(randomValue < 20){
+    boxShadow = "rgba(0, 0, 0, .2)";
+  }else if(randomValue < 62){
+    boxShadow = "rgba(85, 176, 250, .2)"; 
+  }else if(randomValue < 90){
+    boxShadow = "rgba(8, 109, 191, .2)";
+  } 
+
   const boxColor = {
-    boxShadow: "inset 0 17px 27px -10px rgba(242, 48, 68, .2)",
+    boxShadow: `inset 0 17px 27px -10px ${boxShadow}`,
     borderTopLeftRadius: "100vw",
     borderTopRightRadius: "100vw",
+    transition: ".5s all ease-in"
   };
 
   const handleTimeClick = ()=>{
@@ -42,7 +57,8 @@ const technicalData = {
             type="button"
             className="inline-block px-4 text-lg font-semibold border focus:bg-green-500 focus:text-white"
           >
-            {item}min
+            {item}
+            min
           </button>
         ))}
       </div>
